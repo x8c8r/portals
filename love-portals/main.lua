@@ -118,12 +118,13 @@ function love.draw()
 	else 
 		player = love.graphics.circle("fill", x, y, 5)
 	end
+	if enablePortals then
+		love.graphics.line(1, 1, screenWidth-1, 1)
 
-	love.graphics.line(1, 1, screenWidth-1, 1)
+		love.graphics.line(1, 1, 1, screenHeight-1)
 
-	love.graphics.line(1, 1, 1, screenHeight-1)
+		love.graphics.line(screenWidth-1, 1, screenWidth-1, screenHeight-1)
 
-	love.graphics.line(screenWidth-1, 1, screenWidth-1, screenHeight-1)
-
-	love.graphics.line(1, screenHeight-1, screenWidth-1, screenHeight-1)
+		love.graphics.line(1, screenHeight-1, screenWidth-1, screenHeight-1)
+	end
 end
