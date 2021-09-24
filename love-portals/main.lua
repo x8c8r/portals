@@ -4,8 +4,6 @@ require 'debugMode'
 function love.conf(s)
 	s.screenWidth = 800
 	s.screenHeight = 600
-	
-	s.window.title = "love-portals. Always here to LÖVE you!"
 
 	s.version = "1.0"
 
@@ -44,6 +42,9 @@ function love.load()
 	blue = {0/255, 0/255, 255/255}
 	light_blue = {0/255, 255/255, 255/255}
 	purple = {128/255, 0/255, 128/255}
+
+-- Other stuff
+	love.window.setTitle("love-portals")
 end
 
 function love.update(dt)
